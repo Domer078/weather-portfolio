@@ -1,11 +1,12 @@
-import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import "./weather.css";
+
 import Weather from "./weather";
 
 function App() {
   return (
     <div className="App">
-      <h1>Weather App</h1>
       <Weather />
     </div>
   );
