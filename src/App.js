@@ -1,6 +1,4 @@
-import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import "./weather.css";
 
 import Weather from "./weather";
 
