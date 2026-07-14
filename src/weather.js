@@ -1,21 +1,19 @@
 import React from "react";
-// import axios from "axios";
-import "./weather.css";
 
 export default function Weather() {
-  return (
-    <div className="Weather">
+  <div className="Weather">
+    <div className="container">
       <form>
         <div className="row">
           <div className="col-9">
             <input
               type="search"
-              placeholder="Enter a city.."
-              autoFocus="on"
+              placeholder="Enter a city"
+              autoFocus={true}
               className="searchInput"
             />
           </div>
-          <div className="col-3">
+          <div className="col-3 p-0">
             <input
               type="submit"
               value="search"
@@ -25,5 +23,5 @@ export default function Weather() {
         </div>
       </form>
     </div>
-  );
+  </div>;
 }
