@@ -1,3 +1,12 @@
+.Weather {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 30px 50px #41326414;
+  color: #878787;
+  font-family: Cerebri-Sans, Helvetica, Arial, sans-serif;
+  padding: 40px;
+}
+
 .Weather .searchInput {
   background: #f9f7fe;
   border: none;
