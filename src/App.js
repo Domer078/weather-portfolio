@@ -1,5 +1,5 @@
 import "./App.css";
-import "./Weather.css";
+import "./weather.css";
 
 import Weather from "./Weather";
 
