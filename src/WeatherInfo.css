@@ -34,6 +34,14 @@
   line-height: 1;
   margin-left: 10px;
 }
+
+.WeatherInfo .weather-icon {
+  width: 64px;
+  height: 64px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+}
 .WeatherInfo .unit {
   color: rgb(33, 33, 33);
   font-size: 28px;
