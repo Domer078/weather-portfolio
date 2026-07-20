@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./WeatherInfo.css";
 import axios from "axios";
+import WeatherForecast from "./WeatherForecast.js";
 import WeatherInfo from "./WeatherInfo.js";
 
 export default function Weather(props) {
@@ -8,9 +9,10 @@ export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
   function handleResponse(response) {
     console.log(response);
-    console.log(new Date(response.data.time * 1000));
+
     setWeatherData({
       ready: true,
+      coordinates: response.data.coordinates,
       temperature: Math.round(response.data.temperature.current),
       humidity: response.data.temperature.humidity,
       date: new Date(response.data.time * 1000),
@@ -59,6 +61,35 @@ export default function Weather(props) {
             </div>
           </form>
           <WeatherInfo data={weatherData} />
+          <WeatherForecast coordinates={weatherData.coordinates} />
+          <footer>
+            {" "}
+            This project was coded by{" "}
+            <a
+              href="https://github.com/domer078"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Khomotso Mabala
+            </a>{" "}
+            and is
+            <a
+              href="https://github.com/Domer078/weather-portfolio"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {" "}
+              open-sourced on GitHub
+            </a>{" "}
+            and{" "}
+            <a
+              href="https://shimmering-kitsune-6975a6.netlify.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              hosted on Netlify
+            </a>
+          </footer>
         </div>
       </div>
     );
